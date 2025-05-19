@@ -90,7 +90,7 @@ trait PerformsCharges
         }
 
         return new Payment(
-            $this->stripe()->paymentIntents->create($options)
+            static::stripe()->paymentIntents->create($options)
         );
     }
 
@@ -105,7 +105,7 @@ trait PerformsCharges
         $stripePaymentIntent = null;
 
         try {
-            $stripePaymentIntent = $this->stripe()->paymentIntents->retrieve($id);
+            $stripePaymentIntent = static::stripe()->paymentIntents->retrieve($id);
         } catch (StripeInvalidRequestException $exception) {
             //
         }
@@ -122,7 +122,7 @@ trait PerformsCharges
      */
     public function refund($paymentIntent, array $options = [])
     {
-        return $this->stripe()->refunds->create(
+        return static::stripe()->refunds->create(
             ['payment_intent' => $paymentIntent] + $options
         );
     }
@@ -148,9 +148,10 @@ trait PerformsCharges
      * @param  int  $quantity
      * @param  array  $sessionOptions
      * @param  array  $customerOptions
+     * @param  array  $productData
      * @return \Laravel\Cashier\Checkout
      */
-    public function checkoutCharge($amount, $name, $quantity = 1, array $sessionOptions = [], array $customerOptions = [])
+    public function checkoutCharge($amount, $name, $quantity = 1, array $sessionOptions = [], array $customerOptions = [], array $productData = [])
     {
         if ($this->isAutomaticTaxEnabled()) {
             throw new LogicException('For now, you cannot use checkout charges in combination with automatic tax calculation.');
@@ -159,9 +160,9 @@ trait PerformsCharges
         return $this->checkout([[
             'price_data' => [
                 'currency' => $this->preferredCurrency(),
-                'product_data' => [
+                'product_data' => array_merge($productData, [
                     'name' => $name,
-                ],
+                ]),
                 'unit_amount' => $amount,
             ],
             'quantity' => $quantity,
