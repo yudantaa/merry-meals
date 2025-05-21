@@ -38,10 +38,10 @@ Route::get('order/success', [OrderController::class, 'orderSuccess'])->name('mea
 // public page controller
 Route::controller(PublicPageController::class)->group(function () {
     Route::get('/', 'index')->name('landing.index');
-    Route::get('/about', 'aboutIndex')->name('about');
-    Route::get('/contact', 'contactIndex')->name('contact');
-    Route::get('/term', 'termIndex')->name('term');
-    Route::get('/donate', 'donationIndex')->name('donation');
+    Route::get('/about', 'aboutIndex')->name('about.index');
+    Route::get('/contact', 'contactIndex')->name('contact.index');
+    Route::get('/term', 'termIndex')->name('term.index');
+    Route::get('/donate', 'donationIndex')->name('donation.index');
 });
 
 //  member  controller

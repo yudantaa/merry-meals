@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\Enum\\ButtonType' => $baseDir . '/app/Enum/ButtonType.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Admin\\UserManagementController' => $baseDir . '/app/Http/Controllers/Admin/UserManagementController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
@@ -52,6 +53,8 @@ return array(
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
+    'App\\View\\Components\\Button\\Index' => $baseDir . '/app/View/Components/Button/Index.php',
+    'App\\View\\Components\\NavLink' => $baseDir . '/app/View/Components/NavLink.php',
     'App\\View\\Components\\about' => $baseDir . '/app/View/Components/about.php',
     'App\\View\\Components\\contact' => $baseDir . '/app/View/Components/contact.php',
     'App\\View\\Components\\donate' => $baseDir . '/app/View/Components/donate.php',
@@ -62,7 +65,6 @@ return array(
     'App\\View\\Components\\login' => $baseDir . '/app/View/Components/login.php',
     'App\\View\\Components\\meal_detail' => $baseDir . '/app/View/Components/meal_detail.php',
     'App\\View\\Components\\meal_menu' => $baseDir . '/app/View/Components/meal_menu.php',
-    'App\\View\\Components\\navbar' => $baseDir . '/app/View/Components/navbar.php',
     'App\\View\\Components\\navbarMember' => $baseDir . '/app/View/Components/navbarMember.php',
     'App\\View\\Components\\order_success' => $baseDir . '/app/View/Components/order_success.php',
     'App\\View\\Components\\register' => $baseDir . '/app/View/Components/register.php',

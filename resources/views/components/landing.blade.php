@@ -1,63 +1,125 @@
 @extends('layout.main')
 @section('component_content')
-<main class="font-poppins">
-    @include('components.navbar')
-
-    <div style="background-image: url('images/landingSalad.png')"
-        class="bg-hero-banner h-[813px] bg-no-repeat bg-center bg-cover py-[151px] leading-relaxed">
-        <div class="hero-text bg-yellow-rgba-84 h-[519px] flex flex-col justify-center items-center text-[#282222]">
-            <h1 class="font-semibold text-[48px]">Meals cooked for everyone</h1>
-            <h2 class="w-[1146px] text-center text-[20px] font-medium mt-[20px]">Thousands of volunteers and
-                caregivers are ready to help vulnerable seniors and people with disabilities across the nation.
-                Health and prosperity for livings will be our priority for everyone.</h2>
-        </div> <!-- hero-text -->
-    </div> <!-- bg-hero-banner -->
-
-    <div class="section-serve h-[874px] bg-[#FFFCF0] py-[222px] pl-[147px] flex items-center leading-relaxed">
-        <div class="section-serve-content h-[431px] w-full flex flex-row justify-between space-x-[86px]">
-            <div class="section-serve-content-text w-[430px] text-[#282222] flex flex-col space-y-[64px]">
-                <h1 class="h-[120px] w-[362px] font-semibold text-[40px]">We serve the best of humanity</h1>
-
-                <h2 class="h-[120px] w-[562px] font-medium text-[20px] text-justify">Merry Meals service works
-                    virtually throughout the region of the Indonesia archipelago. Our staff and volunteers will
-                    prioritize being in areas where there are many vulnerable and people with disability.</h2>
-
-                <a href="{{ route('about') }}"><button
-                        class="bg-[#FFFCF0] border-2 border-[#A07C00] text-[16px] text-[#A07C00] h-[63px] w-[370px] hover:scale-105 duration-500">Learn
-                        more about Merry Meals</button></a>
-            </div> <!-- section-serve-content-text -->
-
-            <div class="section-serve-content-image h-[430px] w-[644px]">
-                <img src={{ asset('images/aboutUsImage.jpg') }} alt="serve-with-grandma-picture">
-            </div> <!-- section-serve-content-image -->
-        </div> <!-- section-serve-content -->
-    </div> <!-- section-serve -->
-
-    <div style="background-image: url('images/landingPageImage3Edited.jpg');"
-        class="section-healthy h-[662px] w-full bg-no-repeat bg-cover bg-left py-[86px] flex justify-end leading-relaxed">
-        <div
-            class="healthy-text pl-[57px] py-[107px] h-[489px] w-[857px] bg-[#FFFDF6] text-[#282222] flex flex-col space-y-[35px]">
-            <h1 class="h-[180px] w-[371px] font-semibold text-[40px]">Healthy food to live a healthier life in the
-                future</h1>
-            <h2 class="h-[60px] w-[651px] font-medium text-[20px]">By eating healthy foods that have extraordinary
-                flavors that make your life healthier for today and in the future</h2>
-        </div> <!-- healthy-text -->
-    </div> <!-- section-healthy -->
-
+  <section
+    style="background-image: url('storage/images/landingSalad.png')"
+    class="bg-hero-banner flex h-[70svh] items-center bg-cover bg-center bg-no-repeat leading-relaxed lg:h-[813px] lg:py-[151px] xl:h-[90lvh]"
+  >
     <div
-        class="section-charity bg-[#FFFDF6] h-[1037px] w-full py-[222px] px-[147px] flex justify-center items-center leading-relaxed">
-        <div
-            class="section-charity-content h-[593px] w-[1144px] flex flex-col justify-center items-center space-y-[71px] text-[#282222] text-center">
-            <h1 class="h-[120px] w-[358px] font-semibold text-[40px]">Charity is an act of a soft heart</h1>
-            <h2 class="h-[60px] w-[1144px] text-[20px]">Merry Meal is a humanitarian platform that carries the
-                concept of sharing for fellow human beings. <br> Through Merry Meal, you can donate to whom that
-                need the most. Let’s start your action of help! </h2>
+      class="hero-text flex h-[50svh] w-full flex-col items-center justify-center bg-yellow-rgba-84 text-[#282222] xl:h-[519px]"
+    >
+      <h1 class="mb-4 text-xl font-semibold capitalize sm:text-3xl lg:text-4xl">Meals cooked for everyone</h1>
+      <p
+        class="mx-10 text-center text-sm font-medium leading-relaxed sm:mx-0 sm:max-w-md sm:text-pretty sm:text-base lg:mt-5 lg:text-base xl:max-w-xl"
+      >
+        Thousands of volunteers and caregivers are ready to help vulnerable seniors and people with disabilities across
+        the nation. Health and prosperity for livings will be our priority for everyone.
+      </p>
+    </div>
+    <!-- hero-text -->
+  </section>
 
-            <a href="{{ route('donation') }}" class="font-semibold"><button
-                    class="h-[271px] w-[271px] text-[40px] text-[#FFFDF6] py-[75px] px-[61px] bg-gradient-to-t from-[#FFA800] to-[#FFCE01] hover:scale-105 duration-500 text-justify z-1">Donate
-                    Now <i class="fa fa-solid fa-right-long"></i></button></a>
-        </div> <!-- section-charity-content -->
-    </div> <!-- section-charity -->
-    @include('components.footer')
-    @endsection
-</main>
+  <!-- section-serve -->
+  <section
+    class="mx-auto flex w-full max-w-screen-2xl flex-col justify-center gap-4 px-8 py-20 lg:min-h-[80lvh] lg:flex-row lg:items-center lg:gap-12"
+  >
+    <div class="order-1 flex w-full flex-col items-center justify-center gap-6 lg:pl-10">
+      <h1
+        class="w-full text-center text-xl font-semibold capitalize sm:max-w-sm sm:text-pretty sm:text-3xl lg:max-w-md lg:self-start lg:text-left lg:text-4xl lg:leading-tight"
+      >
+        we
+        <span class="text-primary">serve</span>
+        the best of humanity
+      </h1>
+      <img
+        class="block w-9/12 rounded-lg sm:w-7/12 lg:hidden"
+        src="{{ asset('storage/images/aboutUsImage.jpg') }}"
+        alt="granma-image"
+      />
+      <p
+        class="w-10/12 text-pretty text-center text-sm font-medium leading-relaxed sm:max-w-md sm:text-base lg:self-start lg:text-left"
+      >
+        Merry Meals service works virtually throughout the region of the Indonesia archipelago. Our staff and volunteers
+        will prioritize being in areas where there are many vulnerable and people with disability.
+      </p>
+      <div class="hidden self-start lg:block lg:w-9/12">
+        <x-button
+          :type="App\Enum\ButtonType::OutlineHover"
+          :route="route('landing.index')"
+          :classes="'border-accentSecondary text-accentSecondary hover:border-accentSecondary hover:bg-accentSecondary'"
+          :title="'learn more button'"
+        >
+          Learn More
+        </x-button>
+      </div>
+    </div>
+    <div class="order-2 w-full lg:order-3">
+      <img
+        class="mx-auto hidden w-9/12 rounded-lg shadow sm:w-7/12 lg:block lg:w-full xl:w-9/12"
+        src="{{ asset('storage/images/aboutUsImage.jpg') }}"
+        alt="granma-image"
+      />
+    </div>
+    <div class="order-3 flex w-full justify-center lg:order-2 lg:hidden">
+      <x-button
+        :type="App\Enum\ButtonType::OutlineHover"
+        :route="route('landing.index')"
+        :classes="'border-accentSecondary text-accentSecondary hover:border-accentSecondary hover:bg-accentSecondary'"
+        :title="'learn more button'"
+      >
+        Learn More
+      </x-button>
+    </div>
+  </section>
+
+  <section
+    style="background-image: url('storage/images/landingPageImage3Edited.jpg')"
+    class="section-healthy flex h-[60svh] w-full items-center text-pretty bg-cover bg-left bg-no-repeat py-[86px] leading-relaxed lg:h-[50lvh] lg:min-h-[80lvh]"
+  >
+    <div
+      class="healthy-text flex w-full flex-col space-y-[35px] rounded-lg bg-light p-6 py-20 text-dark sm:items-center sm:text-pretty lg:ml-auto lg:h-[489px] lg:w-[857px] lg:py-[107px] lg:pl-[57px] 2xl:min-w-[1280px]"
+    >
+      <h1
+        class="text-center text-xl font-semibold sm:max-w-md sm:text-3xl lg:text-left lg:text-[40px] lg:leading-tight"
+      >
+        Healthy food to live a healthier life in the future
+      </h1>
+      <p
+        class="h-[60px] w-full text-pretty text-center text-sm font-medium leading-relaxed sm:max-w-md sm:text-base lg:w-[651px] lg:text-left lg:text-lg"
+      >
+        By eating healthy foods that have extraordinary flavors that make your life healthier for today and in the
+        future
+      </p>
+    </div>
+    <!-- healthy-text -->
+  </section>
+  <!-- section-healthy -->
+
+  <section
+    class="section-charity flex w-full items-center justify-center bg-secondary px-6 py-24 leading-relaxed xl:min-h-[50dvh]"
+  >
+    <div
+      class="section-charity-content flex w-full flex-col items-center justify-center gap-8 text-center text-[#282222] xl:space-y-[71px]"
+    >
+      <h1 class="text-3xl font-semibold sm:w-[358px] sm:max-w-md sm:text-pretty xl:text-[40px] xl:leading-tight">
+        Charity is an act of a soft heart
+      </h1>
+      <p
+        class="w-full text-pretty text-center text-sm font-medium leading-relaxed sm:max-w-md sm:text-base xl:max-w-screen-md xl:text-xl"
+      >
+        Merry Meal is a humanitarian platform that carries the concept of sharing for fellow human beings. Through Merry
+        Meal, you can donate to whom that need the most. Let’s start your action of help!
+      </p>
+
+      <a href="{{ route('donation.index') }}" class="font-semibold">
+        <button
+          class="z-1 h-[271px] w-[271px] rounded-lg bg-gradient-to-t from-[#FFA800] to-[#FFCE01] px-[61px] py-[75px] text-justify text-[40px] text-[#FFFDF6] duration-500 hover:scale-105"
+        >
+          Donate Now
+          <i class="fa fa-solid fa-right-long"></i>
+        </button>
+      </a>
+    </div>
+    <!-- section-charity-content -->
+  </section>
+  <!-- section-charity -->
+@endsection
