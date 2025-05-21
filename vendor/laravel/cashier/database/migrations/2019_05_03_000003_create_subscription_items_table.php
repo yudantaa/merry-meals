@@ -8,10 +8,8 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('subscription_items', function (Blueprint $table) {
             $table->id();
@@ -22,16 +20,14 @@ return new class extends Migration
             $table->integer('quantity')->nullable();
             $table->timestamps();
 
-            $table->unique(['subscription_id', 'stripe_price']);
+            $table->index(['subscription_id', 'stripe_price']);
         });
     }
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('subscription_items');
     }
