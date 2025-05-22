@@ -1,10 +1,13 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './resources/**/*.blade.php',
-    './resources/**/*.js',
-    './resources/**/*.vue',
+    './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+    './storage/framework/views/*.php',
+    './resources/views/**/*.blade.php',
     './node_modules/flowbite/**/*.js',
+    './resources/**/*.js',
   ],
 
   theme: {
@@ -25,7 +28,7 @@ module.exports = {
         accentSecondary: '#EDB01C',
         dark: '#282222',
         light: '#fffcf0',
-        lightSecondary: "#FFFDF6"
+        lightSecondary: '#FFFDF6',
       },
     },
   },
@@ -55,5 +58,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [require('daisyui', 'flowbite')],
+  plugins: [require('@tailwindcss/forms', 'daisyui', 'flowbite')],
 };
