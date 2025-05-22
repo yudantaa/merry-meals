@@ -1,31 +1,30 @@
 @extends('layout.main')
 @section('component_content')
 <main class="bg-[#FFFCF0]">
-    @include('components.navbar')
-
     <!-- content1 -->
-    <div class="bg-[#FFE383] font-Poppins text-[#282222] h-auto lg:h-auto flex flex-col lg:flex-row items-center justify-between px-6 lg:pl-[147px] gap-6 lg:gap-10 leading-relaxed">
-        <div class="w-full lg:w-[504px] h-auto lg:h-auto mt-[50px] lg:mt-[100px] flex flex-col justify-center space-y-4">
-            <h1 class="font-Poppins text-[32px] lg:text-[64px] text-[#282222] font-bold">Our Mission</h1>
-            <p class="font-Poppins text-[16px] lg:text-[20px] text-[#282222] text-justify">
+    <div class="bg-[#FFE383] font-Poppins text-[#282222] h-auto flex flex-col md:flex-row items-center justify-between px-6 md:px-0 leading-relaxed text-pretty">
+        <!-- Text Section -->
+        <div class="w-full md:w-auto flex-1 h-full mt-[50px] md:mt-[100px] flex flex-col justify-center space-y-4 px-6 md:pl-[147px]">
+            <h1 class="font-Poppins text-[28px] sm:text-[32px] md:text-[48px] lg:text-[64px] text-[#282222] font-bold">Our Mission</h1>
+            <p class="font-Poppins text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#282222] text-justify">
                 The most vulnerable elderly and individuals with disabilities in Indonesia are presently confronting extreme food insecurity. Merry Meal continues to expand to satisfy the rising need for healthy and inexpensive meals.
             </p>
         </div>
 
-        <div class="w-full lg:w-[710px] xl:w-[800px] h-auto mt-[20px] lg:mt-[10px] flex justify-center lg:justify-end">
-            <img class="w-full lg:w-auto xl:w-auto h-auto max-w-full object-contain shrink-0" src={{ asset('images/peopleGathering.jpg') }} alt="aboutUs">
+        <!-- Image Section -->
+        <div class="w-full md:w-auto flex-1 h-full flex justify-center md:justify-end mt-[20px] md:mt-0">
+            <img class="w-full md:w-auto h-auto max-w-full object-cover" src={{ asset('storage/images/peopleGathering.jpg') }} alt="aboutUs">
         </div>
     </div>
 
     <!-- content2 -->
-    <div
-        class="bg-[#FFFCF0] w-full h-fit flex flex-col justify-center font-Poppins text-[#282222] px-6 lg:px-[147px] pt-[80px] lg:pt-[163px] leading-relaxed">
+    <div class="bg-[#FFFCF0] w-full h-fit flex flex-col justify-center font-Poppins text-[#282222] px-6 sm:px-[147px] pt-[80px] sm:pt-[163px] leading-relaxed text-pretty">
         <div class="w-full flex flex-col justify-center">
-            <h1 class="text-[28px] lg:text-[40px] font-bold mb-[20px] lg:mb-[30px]">
+            <h1 class="text-[28px] sm:text-[40px] font-bold mb-[20px] sm:mb-[30px]">
                 What is Merry Meal
             </h1>
 
-            <div class="about-us-paragraph text-[16px] lg:text-[20px] flex flex-col space-y-[20px] lg:space-y-[30px] text-justify">
+            <div class="about-us-paragraph text-[16px] sm:text-[20px] flex flex-col space-y-[20px] sm:space-y-[30px] text-justify">
                 <p>
                     Merry Meal provides healthy, tasty, and cheap meals to a number of populations, including elderly,
                     those with physical disabilities and cognitive impairments, people who are ill or recuperating from
@@ -46,47 +45,55 @@
     </div>
 
     <!-- content3 -->
-    <div class="bg-constribution bg-[#FFFCF0] w-full h-fit py-[100px] lg:py-[216px] px-6 lg:px-[147px] leading-relaxed">
-        <div class="constribution text-[#282222] text-center flex flex-col space-y-[50px] lg:space-y-[84px] w-full">
+    <div class="bg-constribution bg-[#FFFCF0] w-full h-fit py-[100px] sm:py-[216px] px-6 sm:px-[147px] leading-relaxed text-pretty">
+        <div class="constribution text-[#282222] text-center flex flex-col space-y-[50px] sm:space-y-[84px] w-full">
             <div class="constribution-text">
-                <h1 class="font-semibold text-[28px] lg:text-[40px]">Our contributions on communities</h1>
+                <h1 class="font-semibold text-[28px] sm:text-[40px]">Our contributions on communities</h1>
             </div>
-
-            <div class="constribution-icons w-full h-fit flex flex-wrap sm:flex-nowrap justify-center sm:justify-between gap-6 sm:gap-8">
+    
+            <!-- Icons Section -->
+            <div class="constribution-icons w-full h-fit grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                <!-- Icon 1 -->
                 <div class="bg-i-fork flex flex-col items-center justify-center">
                     <div
-                        class="i-fork h-[120px] lg:h-[177px] w-[120px] lg:w-[177px] bg-gradient-to-t from-[#FFA800] to-[#FFCE01] rounded-[50%] flex items-center justify-center text-[#FFFCF0] text-[50px] lg:text-[75px]">
-                        <i class="fa-solid fa-utensils"></i></div>
-                    <h2 class="text-[#282222] text-[20px] lg:text-[24px] font-semibold mt-[16px] lg:mt-[26px]">2,000</h2>
-                    <h3 class="text-[#282222] text-[16px] lg:text-[20px] font-normal">Meals Delivered</h3>
+                        class="i-fork h-[120px] sm:h-[177px] w-[120px] sm:w-[177px] bg-gradient-to-t from-[#FFA800] to-[#FFCE01] rounded-[50%] flex items-center justify-center text-[#FFFCF0] text-[50px] sm:text-[75px]">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <h2 class="text-[#282222] text-[20px] sm:text-[24px] font-semibold mt-[16px] sm:mt-[26px]">2,000</h2>
+                    <h3 class="text-[#282222] text-[16px] sm:text-[20px] font-normal">Meals Delivered</h3>
                 </div>
-
+    
+                <!-- Icon 2 -->
                 <div class="bg-i-user flex flex-col items-center justify-center">
                     <div
-                        class="i-user h-[120px] lg:h-[177px] w-[120px] lg:w-[177px] bg-gradient-to-t from-[#FFA800] to-[#FFCE01] rounded-[50%] flex items-center justify-center text-[#FFFCF0] text-[50px] lg:text-[75px]">
-                        <i class="fa-solid fa-user"></i></div>
-                    <h2 class="text-[#282222] text-[20px] lg:text-[24px] font-semibold mt-[16px] lg:mt-[26px]">527</h2>
-                    <h3 class="text-[#282222] text-[16px] lg:text-[20px] font-normal">Individuals Served</h3>
+                        class="i-user h-[120px] sm:h-[177px] w-[120px] sm:w-[177px] bg-gradient-to-t from-[#FFA800] to-[#FFCE01] rounded-[50%] flex items-center justify-center text-[#FFFCF0] text-[50px] sm:text-[75px]">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <h2 class="text-[#282222] text-[20px] sm:text-[24px] font-semibold mt-[16px] sm:mt-[26px]">527</h2>
+                    <h3 class="text-[#282222] text-[16px] sm:text-[20px] font-normal">Individuals Served</h3>
                 </div>
-
+    
+                <!-- Icon 3 -->
                 <div class="bg-i-handlove flex flex-col items-center justify-center">
                     <div
-                        class="i-handlove h-[120px] lg:h-[177px] w-[120px] lg:w-[177px] bg-gradient-to-t from-[#FFA800] to-[#FFCE01] rounded-[50%] flex items-center justify-center text-[#FFFCF0] text-[50px] lg:text-[75px]">
-                        <i class="fa-solid fa-hand-holding-heart"></i></div>
-                    <h2 class="text-[#282222] text-[20px] lg:text-[24px] font-semibold mt-[16px] lg:mt-[26px]">31</h2>
-                    <h3 class="text-[#282222] text-[16px] lg:text-[20px] font-normal">Received Partner Funding</h3>
+                        class="i-handlove h-[120px] sm:h-[177px] w-[120px] sm:w-[177px] bg-gradient-to-t from-[#FFA800] to-[#FFCE01] rounded-[50%] flex items-center justify-center text-[#FFFCF0] text-[50px] sm:text-[75px]">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                    </div>
+                    <h2 class="text-[#282222] text-[20px] sm:text-[24px] font-semibold mt-[16px] sm:mt-[26px]">31</h2>
+                    <h3 class="text-[#282222] text-[16px] sm:text-[20px] font-normal">Received Partner Funding</h3>
                 </div>
-
+    
+                <!-- Icon 4 -->
                 <div class="bg-i-person flex flex-col items-center justify-center">
                     <div
-                        class="i-person h-[120px] lg:h-[177px] w-[120px] lg:w-[177px] bg-gradient-to-t from-[#FFA800] to-[#FFCE01] rounded-[50%] flex items-center justify-center text-[#FFFCF0] text-[50px] lg:text-[75px]">
-                        <i class="fa-solid fa-person-walking-with-cane"></i></div>
-                    <h2 class="text-[#282222] text-[20px] lg:text-[24px] font-semibold mt-[16px] lg:mt-[26px]">73%</h2>
-                    <h3 class="text-[#282222] text-[16px] lg:text-[20px] font-normal">Recipients 58+ Years</h3>
+                        class="i-person h-[120px] sm:h-[177px] w-[120px] sm:w-[177px] bg-gradient-to-t from-[#FFA800] to-[#FFCE01] rounded-[50%] flex items-center justify-center text-[#FFFCF0] text-[50px] sm:text-[75px]">
+                        <i class="fa-solid fa-person-walking-with-cane"></i>
+                    </div>
+                    <h2 class="text-[#282222] text-[20px] sm:text-[24px] font-semibold mt-[16px] sm:mt-[26px]">73%</h2>
+                    <h3 class="text-[#282222] text-[16px] sm:text-[20px] font-normal">Recipients 58+ Years</h3>
                 </div>
             </div>
         </div>
     </div>
 </main>
-@include('components.footer')
 @endsection

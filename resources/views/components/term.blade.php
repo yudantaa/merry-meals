@@ -1,9 +1,8 @@
 @extends('layout.main')
 @section('component_content')
 <main class="bg-[#FFFCF0]">
-    @include('components.navbar')
     <div
-        class="flex justify-center w-full max-w-[1145px] h-auto overflow-y-auto bg-[#FFEEB1] mx-auto my-[70px] text-justify leading-relaxed px-4 sm:px-6 lg:px-8">
+        class="flex justify-center w-full max-w-[1145px] h-auto overflow-y-auto bg-[#FFEEB1] mx-auto my-[70px] text-justify leading-relaxed px-4 sm:px-6 lg:px-8 text-pretty">
         <div class="w-full max-w-[985px] py-6 sm:py-8 lg:py-12">
             <h1 class="font-Poppins text-[28px] sm:text-[32px] lg:text-[40px] text-[#282222] font-bold text-center lg:text-left">
                 Terms & Conditions
@@ -61,6 +60,5 @@
             </p>
         </div>
     </div>
-    @include('components.footer')
 </main>
 @endsection
