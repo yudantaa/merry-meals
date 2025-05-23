@@ -59,4 +59,5 @@ module.exports = {
     ],
   },
   plugins: [require('@tailwindcss/forms', 'daisyui', 'flowbite')],
+  darkMode: 'calss',
 };
