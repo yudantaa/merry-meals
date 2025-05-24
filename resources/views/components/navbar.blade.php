@@ -17,18 +17,18 @@
   </script>
 @endsection
 
-<header
-  class="relative z-50 mx-auto flex min-h-[70px] max-w-screen-2xl bg-white px-4 py-4 tracking-wide shadow-md sm:px-10"
->
-  <div class="flex w-full flex-wrap items-center justify-between gap-5">
-    <a href="{{ route('landing.index') }}" class="flex items-center gap-4 max-sm:hidden">
+<header class="bg-light">
+  <div
+    class="relative z-50 mx-auto flex min-h-[70px] w-full max-w-screen-2xl flex-wrap items-center justify-between gap-5 px-4 py-4 tracking-wide sm:px-10"
+  >
+    <a href="{{ route('index') }}" class="flex items-center gap-4 max-sm:hidden">
       <img src="{{ asset('storage/images/merry-meal-logo-2.png') }}" alt="logo" class="w-9" />
       <div class="flex flex-col">
         <span class="text-lg font-bold uppercase tracking-wider">Merry Meals</span>
         <span class="text-sm font-bold uppercase tracking-widest">Meals On Wheel</span>
       </div>
     </a>
-    <a href="{{ route('landing.index') }}" class="hidden max-sm:block">
+    <a href="{{ route('index') }}" class="hidden max-sm:block">
       <img src="{{ asset('storage/images/merry-meal-logo-2.png') }}" alt="logo" class="w-9" />
     </a>
 
@@ -56,7 +56,7 @@
         class="z-50 gap-x-4 max-lg:fixed max-lg:left-0 max-lg:top-0 max-lg:h-full max-lg:w-1/2 max-lg:min-w-[300px] max-lg:space-y-3 max-lg:overflow-auto max-lg:bg-white max-lg:p-6 max-lg:shadow-md lg:flex"
       >
         <li class="mb-6 hidden max-md:block sm:flex sm:items-center sm:gap-4 lg:hidden">
-          <a href="{{ route('landing.index') }}">
+          <a href="{{ route('index') }}">
             <img src="{{ asset('storage/images/merry-meal-logo-2.png') }}" alt="logo" class="w-36" />
           </a>
           <div class="flex flex-col text-dark">
@@ -64,12 +64,10 @@
             <span class="text-sm font-medium tracking-widest">Meals On Wheel</span>
           </div>
         </li>
-        <x-nav-link :active="request()->routeIs('landing.index')" :route="route('landing.index')">Home</x-nav-link>
-        <x-nav-link :active="request()->routeIs('about.index')" :route="route('about.index')">About</x-nav-link>
-        <x-nav-link :active="request()->routeIs('contact.index')" :route="route('contact.index')">Contact</x-nav-link>
-        <x-nav-link :active="request()->routeIs('donation.index')" :route="route('donation.index')">
-          Donation
-        </x-nav-link>
+        <x-nav-link :active="request()->routeIs('index')" :route="route('index')">Home</x-nav-link>
+        <x-nav-link :active="request()->routeIs('about')" :route="route('about')">About</x-nav-link>
+        <x-nav-link :active="request()->routeIs('contact')" :route="route('contact')">Contact</x-nav-link>
+        <x-nav-link :active="request()->routeIs('donation')" :route="route('donation')">Donation</x-nav-link>
       </ul>
     </div>
 
@@ -79,7 +77,7 @@
       </x-button>
       <x-button
         :type="App\Enum\ButtonType::OutlineHover"
-        :route="route('register.index')"
+        :route="route('register')"
         :classes="'border-dark hover:bg-dark !text-dark hover:!text-light'"
       >
         Join Now

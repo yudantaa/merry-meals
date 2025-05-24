@@ -38,3 +38,4 @@ yarn-error.log
 /.zed
 package-lock.json
 yarn.lock
+composer.lock
