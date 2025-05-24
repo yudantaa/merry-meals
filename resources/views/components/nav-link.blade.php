@@ -1,4 +1,3 @@
-
 @php
   $classes = $active ? 'text-accent' : '';
 @endphp

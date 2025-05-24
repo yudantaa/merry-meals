@@ -12,7 +12,7 @@
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
                     <p>{{ Session::get('success') }}</p>
                 </div>
-                @endif  
+                @endif
 
                 <div class="payment-form">
                     <form role="form" action="{{ route('donation.post') }}" method="post" data-cc-on-file="false" data-stripe-publishable-key="{{ env('STRIPE_KEY') }}" id="payment-form" class="require-validation flex flex-col space-y-[15px]">
@@ -56,7 +56,7 @@
 
                     <h2 class="text-start text-[20px] font-semibold">Description</h2>
 
-                    <div class="input-style pb-[2rem]">                        
+                    <div class="input-style pb-[2rem]">
                         <textarea name="description" class="p-[1rem] textarea textarea-bordered text-dark w-full border-[#BABABA] rounded" id="description" cols="80" rows="6" required></textarea>
                     </div> <!-- input-style -->
 

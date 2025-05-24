@@ -5,7 +5,7 @@
       class="grid grid-cols-2 gap-3 gap-y-8 py-10 max-sm:mx-auto max-sm:max-w-sm sm:grid-cols-4 md:gap-8 lg:grid-cols-6"
     >
       <div class="col-span-full mb-10 lg:col-span-2 lg:mb-0">
-        <a href="{{ route('landing.index') }}" class="flex items-center justify-center lg:justify-start">
+        <a href="{{ route('index') }}" class="flex items-center justify-center lg:justify-start">
           <div class="rounded-full bg-light p-2">
             <img src="{{ asset('storage/images/merry-meal-logo-2.png') }}" alt="logo" class="w-9" />
           </div>
@@ -19,7 +19,7 @@
         <div class="flex items-center justify-center lg:justify-start">
           <x-button
             :type="App\Enum\ButtonType::SolidHover"
-            :route="route('contact.index')"
+            :route="route('contact')"
             :classes="'text-light hover:border-dark hover:text-dark border-dark'"
           >
             Contact us
@@ -30,10 +30,10 @@
       <div class="text-left lg:mx-auto">
         <h4 class="mb-7 text-lg font-medium text-dark">Merry Meal</h4>
         <ul class="flex flex-col gap-6 text-sm font-medium transition-all duration-500">
-          <nav-link :active="''" :route="route('landing.index')">Home</nav-link>
-          <nav-link :active="''" :route="route('about.index')">About</nav-link>
-          <nav-link :active="''" :route="route('contact.index')">Contact</nav-link>
-          <nav-link :active="''" :route="route('donation.index')">Donation</nav-link>
+          <nav-link :active="''" :route="route('index')">Home</nav-link>
+          <nav-link :active="''" :route="route('about')">About</nav-link>
+          <nav-link :active="''" :route="route('contact')">Contact</nav-link>
+          <nav-link :active="''" :route="route('donation')">Donation</nav-link>
         </ul>
       </div>
       <!--End Col-->
@@ -82,7 +82,7 @@
       <div class="flex flex-col items-center justify-center lg:flex-row lg:justify-between">
         <span class="text-sm font-medium text-dark">
           ©
-          <a href="{{ route('landing.index') }}">MerryMeals</a>
+          <a href="{{ route('index') }}">MerryMeals</a>
           2024, All rights reserved.
         </span>
         <div class="mt-4 flex space-x-4 sm:justify-center lg:mt-0">
