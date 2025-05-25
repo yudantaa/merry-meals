@@ -12,6 +12,18 @@ module.exports = {
 
   theme: {
     extend: {
+      fontSize: {
+        xxs: '0.512rem', // ~8.2px
+        xs: '0.64rem', // ~10.2px
+        sm: '0.8rem', // ~12.8px
+        base: '1rem', // 16px
+        lg: '1.25rem', // 20px
+        xl: '1.563rem', // 25px
+        '2xl': '1.953rem', // 31.25px
+        '3xl': '2.441rem', // ~39.06px
+        '4xl': '3.052rem', // ~48.83px
+        '5xl': '3.815rem', // ~61.04px
+      },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
       },
