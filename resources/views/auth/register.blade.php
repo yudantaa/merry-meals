@@ -1,52 +1,84 @@
 <x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
-        @csrf
+  <div class="mx-auto mt-6 max-w-4xl p-6 max-sm:max-w-lg">
+    <div class="mb-12 text-center sm:mb-16">
+      <div class="flex items-center justify-center gap-4 lg:pb-10">
+        <img src="{{ asset('storage/images/merry-meal-logo-2.png') }}" alt="logo" class="lg:size-3/12" />
+        <div class="flex flex-col">
+          <span class="text-lg font-bold uppercase tracking-wider">Merry Meals</span>
+          <span class="text-sm font-bold uppercase tracking-widest">Meals On Wheel</span>
+        </div>
+      </div>
+      <h4 class="mt-6 text-base font-medium text-dark">Sign up into your account</h4>
+    </div>
 
-        <!-- Name -->
+    <form>
+      <div class="grid gap-8 sm:grid-cols-2">
         <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+          <label class="mb-2 block text-sm font-medium text-slate-800">First Name</label>
+          <input
+            name="name"
+            type="text"
+            class="w-full rounded border-gray-200 bg-slate-100 px-4 py-3 text-sm text-slate-800 outline-primary transition-all focus:border-primary focus:bg-transparent focus:outline-primary"
+            placeholder="Enter name"
+          />
         </div>
-
-        <!-- Email Address -->
-        <div class="mt-4">
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+        <div>
+          <label class="mb-2 block text-sm font-medium text-slate-800">Last Name</label>
+          <input
+            name="lname"
+            type="text"
+            class="w-full rounded border-gray-200 bg-slate-100 px-4 py-3 text-sm text-slate-800 outline-primary transition-all focus:border-primary focus:bg-transparent focus:outline-primary"
+            placeholder="Enter last name"
+          />
         </div>
-
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+        <div>
+          <label class="mb-2 block text-sm font-medium text-slate-800">Email Id</label>
+          <input
+            name="email"
+            type="text"
+            class="w-full rounded border-gray-200 bg-slate-100 px-4 py-3 text-sm text-slate-800 outline-primary transition-all focus:border-primary focus:bg-transparent focus:outline-primary"
+            placeholder="Enter email"
+          />
         </div>
-
-        <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                            type="password"
-                            name="password_confirmation" required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+        <div>
+          <label class="mb-2 block text-sm font-medium text-slate-800">Mobile No.</label>
+          <input
+            name="number"
+            type="number"
+            class="w-full rounded border-gray-200 bg-slate-100 px-4 py-3 text-sm text-slate-800 outline-primary transition-all focus:border-primary focus:bg-transparent focus:outline-primary"
+            placeholder="Enter mobile number"
+          />
         </div>
-
-        <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
-                {{ __('Already registered?') }}
-            </a>
-
-            <x-primary-button class="ml-4">
-                {{ __('Register') }}
-            </x-primary-button>
+        <div>
+          <label class="mb-2 block text-sm font-medium text-slate-800">Password</label>
+          <input
+            name="password"
+            type="password"
+            class="w-full rounded border-gray-200 bg-slate-100 px-4 py-3 text-sm text-slate-800 outline-primary transition-all focus:border-primary focus:bg-transparent focus:outline-primary"
+            placeholder="Enter password"
+          />
         </div>
+        <div>
+          <label class="mb-2 block text-sm font-medium text-slate-800">Confirm Password</label>
+          <input
+            name="cpassword"
+            type="password"
+            class="w-full rounded border-gray-200 bg-slate-100 px-4 py-3 text-sm text-slate-800 outline-primary transition-all focus:border-primary focus:bg-transparent focus:outline-primary"
+            placeholder="Enter confirm password"
+          />
+        </div>
+      </div>
+
+      <div class="mt-12 lg:mt-20 flex items-center justify-center">
+        <x-button
+          :type="App\Enum\ButtonType::SolidHover"
+          :route="route('index')"
+          :classes="'!border-accentSecondary !text-accentSecondary hover:!border-accentSecondary hover:!bg-accentSecondary hover:!text-dark'"
+          :title="'learn more button'"
+        >
+          Register to Merry Meal
+        </x-button>
+      </div>
     </form>
+  </div>
 </x-guest-layout>

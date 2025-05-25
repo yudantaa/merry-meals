@@ -2,7 +2,7 @@
   <!-- Session Status -->
   <x-auth-session-status class="mb-4" :status="session('status')" />
 
-  <div class="fle-col flex min-h-screen items-center justify-center px-4 py-6">
+  <div class="flex-col flex min-h-screen items-center justify-center px-4 py-6">
     <div class="grid w-full max-w-6xl items-center gap-10 max-md:max-w-md md:grid-cols-2">
       <div>
         <div class="flex items-center gap-4 lg:pb-10">
@@ -22,7 +22,7 @@
         </p>
         <p class="mt-12 text-sm font-medium text-dark dark:text-light">
           Don't have an account
-          <a href="javascript:void(0);" class="ml-1 font-medium text-accent hover:underline">Register here</a>
+          <a href="{{ route('register') }}" class="ml-1 font-medium text-accent hover:underline">Register here</a>
         </p>
       </div>
 
@@ -37,7 +37,7 @@
               name="email"
               type="email"
               required
-              class="w-full rounded-md border border-gray-200 bg-slate-100 px-4 py-3 text-sm text-slate-800 outline-0 focus:border-blue-600 focus:bg-transparent"
+              class="w-full rounded-md border border-gray-200 bg-slate-100 px-4 py-3 text-sm text-slate-800 outline-0 focus:border-primary focus:bg-transparent"
               placeholder="Enter Email"
             />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
@@ -48,7 +48,7 @@
               name="password"
               type="password"
               required
-              class="w-full rounded-md border border-gray-200 bg-slate-100 px-4 py-3 text-sm text-slate-800 outline-0 focus:border-blue-600 focus:bg-transparent"
+              class="w-full rounded-md border border-gray-200 bg-slate-100 px-4 py-3 text-sm text-slate-800 outline-0 focus:border-primary focus:bg-transparent"
               placeholder="Enter Password"
             />
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
@@ -59,12 +59,12 @@
                 id="remember_me"
                 name="remember"
                 type="checkbox"
-                class="h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+                class="h-4 w-4 rounded border-slate-300 text-green-50 focus:ring-primary"
               />
               <label for="remember_me" class="ml-3 block text-sm text-slate-500">Remember me</label>
             </div>
             <div class="text-sm">
-              <a href="jajvascript:void(0);" class="font-medium text-accent hover:text-primary">
+              <a href="{{ route('password.request') }}" class="font-medium text-accent hover:text-primary">
                 Forgot your password?
               </a>
             </div>

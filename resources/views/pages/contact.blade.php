@@ -9,7 +9,7 @@
     <!-- Content -->
     <div>
       <div
-        class="m-auto my-[50px] h-auto w-full max-w-[1145px] bg-[#FFEEB1] p-[20px] leading-relaxed md:my-[80px] md:p-[30px] lg:my-[100px] lg:p-[50px]"
+        class="m-auto my-[50px] h-auto w-full max-w-[1145px] text-pretty bg-[#FFEEB1] p-[20px] leading-relaxed md:my-[80px] md:p-[30px] lg:my-[100px] lg:p-[50px]"
       >
         <div class="font-Poppins text-[#282222]">
           <h3 class="text-[24px] font-bold md:text-[32px] lg:text-[40px]">COMPANY SUPPORT</h3>
@@ -19,7 +19,7 @@
             with you
           </p>
 
-          <p class="mt-[40px] text-[14px] text-[#5E5E5E] md:mt-[60px] md:text-[16px] lg:mt-[80px] lg:text-[18px]">
+          <p class="mt-[10px] text-[14px] text-[#5E5E5E] md:mt-[10px] md:text-[16px] lg:mt-[10px] lg:text-[18px]">
             For further question, contacts are available below:
           </p>
 
