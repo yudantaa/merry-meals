@@ -1,8 +1,8 @@
 <x-guest-layout>
   <div class="mx-auto mt-6 max-w-4xl p-6 max-sm:max-w-lg">
     <div class="mb-12 text-center sm:mb-16">
-      <div class="flex items-center justify-center gap-4 lg:pb-10">
-        <img src="{{ asset('storage/images/merry-meal-logo-2.png') }}" alt="logo" class="lg:size-3/12" />
+      <div class="flex items-center justify-center gap-4">
+        <img src="{{ asset('storage/images/merry-meal-logo-2.png') }}" alt="logo" class="size-2/12 lg:size-2/12" />
         <div class="flex flex-col">
           <span class="text-lg font-bold uppercase tracking-wider">Merry Meals</span>
           <span class="text-sm font-bold uppercase tracking-widest">Meals On Wheel</span>
@@ -69,7 +69,7 @@
         </div>
       </div>
 
-      <div class="mt-12 lg:mt-20 flex items-center justify-center">
+      <div class="mt-12 flex items-center justify-center">
         <x-button
           :type="App\Enum\ButtonType::SolidHover"
           :route="route('index')"
