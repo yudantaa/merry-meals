@@ -2,25 +2,25 @@
   <!-- Session Status -->
   <x-auth-session-status class="mb-4" :status="session('status')" />
 
-  <div class="flex-col flex min-h-screen items-center justify-center px-4 py-6">
+  <div class="flex min-h-screen flex-col items-center justify-center px-4 py-6">
     <div class="grid w-full max-w-6xl items-center gap-10 max-md:max-w-md md:grid-cols-2">
       <div>
         <div class="flex items-center gap-4 lg:pb-10">
-          <img src="{{ asset('storage/images/merry-meal-logo-2.png') }}" alt="logo" class="lg:size-3/12" />
+          <img src="{{ asset('storage/images/merry-meal-logo-2.png') }}" alt="logo" class="size-2/12 lg:size-2/12" />
           <div class="flex flex-col">
             <span class="text-lg font-bold uppercase tracking-wider">Merry Meals</span>
             <span class="text-sm font-bold uppercase tracking-widest">Meals On Wheel</span>
           </div>
         </div>
 
-        <h2 class="text-3xl font-bold text-accentSecondary lg:text-5xl lg:leading-[57px] dark:text-light">
+        <h2 class="dark:text-light text-3xl font-bold text-accentSecondary lg:text-5xl lg:leading-[57px]">
           Seamless Login for Exclusive Access
         </h2>
-        <p class="mt-6 text-sm font-medium leading-relaxed text-dark md:text-base lg:text-lg dark:text-light">
+        <p class="dark:text-light mt-6 text-sm font-medium leading-relaxed text-dark md:text-base lg:text-lg">
           Immerse yourself in a hassle-free login journey with our intuitively designed login form. Effortlessly access
           your account.
         </p>
-        <p class="mt-12 text-sm font-medium text-dark dark:text-light">
+        <p class="dark:text-light mt-12 text-sm font-medium text-dark">
           Don't have an account
           <a href="{{ route('register') }}" class="ml-1 font-medium text-accent hover:underline">Register here</a>
         </p>
@@ -28,11 +28,11 @@
 
       <form class="w-full max-w-md md:ml-auto" method="POST">
         @csrf
-        <h3 class="mb-8 text-2xl font-bold text-accentSecondary lg:text-3xl dark:text-light">Sign in</h3>
+        <h3 class="dark:text-light mb-8 text-2xl font-bold text-accentSecondary lg:text-3xl">Sign in</h3>
 
         <div class="space-y-6">
           <div>
-            <label class="mb-2 block text-sm font-medium text-slate-800 dark:text-light">Email</label>
+            <label class="dark:text-light mb-2 block text-sm font-medium text-slate-800">Email</label>
             <input
               name="email"
               type="email"
